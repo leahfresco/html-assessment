@@ -1,0 +1,36 @@
+<!--doctype html
+A form that asks the user:
+their first and last name (as separate fields),
+their salary requirement as a number, and
+which job they are applying for, as a dropdown from a list of:
+Software Engineer
+QA Engineer
+Product Manager
+The form should use HTML 5 input types for validation.
+The form should also have a submit button that submits the form to the URL path /application-success. This should be a POST request. (For now, just focus on the HTML requirements for this request. Don’t build a Flask route, yet.)
+The page should have a large heading and some explanatory text, as well.-->
+
+<html>
+<head>
+  <title>Application Form</title>
+  <link rel="stylesheet"
+      href="styles.css">
+</head>
+<body>
+<h1> Job Inquiry Form </h1>
+<p class="Explanation"> Please submit the following to send information to applicable companies: </p> 
+<form action="/application-success">
+  <p class="firstname"> First Name: <input type="text" name="firstname"></p>
+  <p class="lastname">Last Name: <input type="text" name="lastname"></p>
+  <p class="salary">Salary Requirements: <input type="number" name="salary_req"></p>
+  <p>Job:
+  <select name="job">
+    <option value="software">Software Engineer</option>
+    <option value="qa">QA Engineer</option>
+    <option value="pdm">Product Manager</option>
+  </select></p>
+  <p><input type="submit" value="Submit!" class="button"></p>
+</form>
+
+</body>
+</html>
