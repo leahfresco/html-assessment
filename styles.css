@@ -2,7 +2,7 @@
 Change the text in the last name field to be bold.
 Draw a border around the instruction text.
  */
-form {
+input, select {
     background-color: yellow;
 }
 
